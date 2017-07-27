@@ -1,0 +1,66 @@
+
+<div ng-controller="HomeController" style="margin-left: 8% ; margin-right: 8%" >
+
+    <div  style="margin-left: 10% ; margin-right: 10% ">
+
+        <h2 >Comments List</h2>
+
+        <md-input-container class="md-block" >
+            <div style="background-color: white">
+                <label>Search Comments</label>
+                <input ng-model="searching.id">
+            </div>
+            </br>
+            </br>
+
+            <div   class="container" layout="row" ng-cloak>
+                <md-button href="/#!/es" style="background-color:#6EAFFF " >
+                    search by email
+                </md-button>
+                <!-- <h5>search by id &nbsp;</h5>
+                 <md-switch aria-label="switch" ng-change="onChange(data.cb1)" ng-model="data.cb1"></md-switch>
+
+
+                <h5>search by email</h5>-->
+            </div>
+
+        </md-input-container>
+    </div>
+
+
+    <div class="container" layout="column" ng-repeat="comment in comments | filter: searching ">
+
+
+    <span class="card-title">
+               comment : {{comment.id}}
+
+        </span>
+
+
+        <md-card>
+            <md-card-title>
+                <md-card-title-media>
+
+                </md-card-title-media>
+                <md-card-title-text>
+                    <div layout="row">
+                    <md-button ng-click="remove(comment.id)" class="md-icon-button" aria-label="More" style="left:95%">
+                        <md-icon md-svg-icon="/public/images/delete.svg"></md-icon>
+                    </md-button>
+
+                    <md-button ng-click = "showEdit(comment.id,$event)" class="md-icon-button" aria-label="More" style="left:85%">
+                        <md-icon md-svg-icon="/public/images/edit.svg"></md-icon>
+                    </md-button>
+                    </div>
+                    <span class="md-headline">{{comment.name}}</span>
+                    <span class="md-subhead description" >{{comment.body}}</span>
+                    <span  class="md-subhead description" style="background-color:#2397f3" >{{comment.email}}</span>
+                </md-card-title-text>
+
+
+            </md-card-title>
+        </md-card>
+
+
+    </div>
+</div>

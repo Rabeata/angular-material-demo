@@ -1,0 +1,42 @@
+
+<div ng-controller="HomeController"   >
+
+    <div  style="margin-left: 10% ; margin-right: 10% ">
+
+        <h2 >Edit Comment</h2>
+
+        <md-input-container class="md-block" >
+
+            <div style="background-color: white">
+                <label>Comment Name</label>
+                <input ng-model="data.editName">
+            </div>
+
+        </md-input-container>
+        <md-input-container class="md-block">
+            <div style="background-color: white">
+                <label>Comment Body</label>
+                <input ng-model="data.editBody">
+            </div>
+
+        </md-input-container>
+        <md-input-container class="md-block">
+            <div style="background-color: white">
+                <label>Comment Email</label>
+                <input ng-model="data.editEmail">
+            </div>
+        </md-input-container>
+
+        <div   class="container" layout="row"  ng-cloak >
+            <md-button ng-click="EditComment(data)" style="background-color:#6EAFFF " >
+                Save
+            </md-button>
+            <md-button ng-click="closeDialog()" style="background-color:#6EAFFF " >
+                Cancel
+            </md-button>
+        </div>
+
+
+    </div>
+
+</div>

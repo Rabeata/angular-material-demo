@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>agularTest</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+    <!-- endinject -->
+</head>
+
+<body ng-app="agularTest" ng-cloak>
+<div ng-controller="HomeController">
+
+<md-toolbar >
+    <h1 style="color: white ; margin-left: 1%"  class="md-display-1">Comments View</h1>
+</md-toolbar>
+
+<md-button ng-click = "showAdd($event)" class="md-fab"   style="left: 90% ; background-color: #ff4182" >
+    <md-icon md-svg-src="/public/images/add.svg"></md-icon>
+</md-button>
+
+</div>
+
+
+
+
+    <div ui-view></div>
+    <!-- inject:js -->
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="/bower_components/angular-material/angular-material.min.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="/bower_components/angular-ui-router/angular-ui-router.min.js"></script>
+<script src="/public/js/config/app.js"></script>
+<script src="/public/js/controllers/home-controller.js"></script>
+<!-- endinject -->
+</body>
+
+</html>
